@@ -1,0 +1,54 @@
+* Python snippet
+  #+NAME: python-snippet
+  #+BEGIN_SRC python
+  x = "hello"
+  return [["x","hello"] ,["y", "1"]]
+  #+END_SRC
+
+* Shell snippet
+  #+BEGIN_SRC sh :var x=python-snippet
+  echo "Got" $x
+  #+END_SRC
+
+
+* Haskell snippet
+  #+BEGIN_SRC haskell :var x=python-snippet
+  putStrLn $ "Got " ++ (x !! 0 !! 1) ++ "\n" ++ "Got " ++ (x !! 1 !! 1)
+  #+END_SRC
+
+
+* C literate program
+  The imports
+  #+NAME:imports
+  #+BEGIN_SRC C :tangle ./tangled-c.c :comments yes
+  #include <stdio.h>
+  #+END_SRC
+
+  The print function
+  #+NAME:printer
+  #+BEGIN_SRC C :tangle ./tangled-c.c :comments yes
+  void print_arg(int arg){
+    printf("Arg received: %d", arg);
+  }
+  #+END_SRC
+
+  The main function
+  #+NAME:main
+  #+BEGIN_SRC C :tangle ./tangled-c.c :comments yes
+  int main (int argc, char* argv){
+    print_arg(1);
+    return 0;
+  }
+  #+END_SRC
+
+  #+NAME: compiler
+  #+BEGIN_SRC sh 
+  gcc -c tangled-c.c
+  gcc tangled-c.o -o tangled-c
+  ./tangled-c
+  #+END_SRC
+
+
+
+
+  

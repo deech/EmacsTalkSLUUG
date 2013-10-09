@@ -1,0 +1,67 @@
+* window
+** buffer/window
+** find-file opening a file
+** opening a file opens it up in a buffer
+** save-buffer saving a file
+** kill-buffer close a file
+** frame
+** opening up multiple frames (make-frame-command)
+** list-buffers
+* minibuffer Mx
+* Help
+** apropos
+** describe-key
+** describe-function
+** lossage
+* selecting a region
+** cutting and pasting
+** Paste previous
+** cua mode
+* Undoing
+* undo tree
+* kill-ring
+** undo within region
+* Modes
+** describe-mode
+* Ido mode
+* navigating back and forth in a buffer
+** pop mark
+* rectangle-mode
+** ps -aux example
+** unzip mistake example
+* occur-mode
+** edit in occur-mode (C-c C-c `e` to exit)
+** edit with rectangle mode
+** navigating back and forth between buffers
+** recentf-mode
+* searching & replace
+* searching across buffers
+* grep buffer
+* looking inside an archive
+* can't search, unfortunately
+* dired
+* dired-edit
+* Emacs as a server
+* shell-command / C-u shell-command
+* eshell
+* imenu
+* org-mode
+* org-beamer
+* org-table
+* org-table with columns
+* org-babel
+** code-snippets
+** detangling
+* org-table babel integration
+* org export to html
+* macros
+* counters
+* macro-ring
+* ielm
+* toggle zoom
+* skeletons
+* skelton + ido-completing-read
+* Package manager
+* ace-jump-mode
+* multiple cursors
+* evil-mode?

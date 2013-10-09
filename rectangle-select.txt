@@ -1,0 +1,17 @@
+aaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbb
+ccccccccccccccccccccccccccc
+ddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeee
+fffffffffffffffffffffffffff
+ggggggggggggggggggggggggggg
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda7      141961016 43052876  91690220  32% /
+none                   4        0         4   0% /sys/fs/cgroup
+udev             1853172        4   1853168   1% /dev
+tmpfs             372544      912    371632   1% /run
+none                5120        0      5120   0% /run/lock
+none             1862712       68   1862644   1% /run/shm
+none              102400       52    102348   1% /run/user

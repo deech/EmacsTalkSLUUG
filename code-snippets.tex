@@ -1,0 +1,93 @@
+% Created 2013-10-08 Tue 21:15
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{code-snippets}
+\author{deech}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.9.3f}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+\section{Python snippet}
+\label{sec-1}
+
+
+\begin{verbatim}
+x = "hello"
+return [["x","hello"] ,["y", "1"]]
+\end{verbatim}
+\section{Shell snippet}
+\label{sec-2}
+
+
+\begin{verbatim}
+echo "Got" $x
+\end{verbatim}
+\section{Haskell snippet}
+\label{sec-3}
+
+
+\begin{verbatim}
+putStrLn $ "Got " ++ (x !! 0 !! 1) ++ "\n" ++ "Got " ++ (x !! 1 !! 1)
+\end{verbatim}
+\section{C literate program}
+\label{sec-4}
+
+  The imports
+
+\begin{verbatim}
+#include <stdio.h>
+\end{verbatim}
+
+  The print function
+
+\begin{verbatim}
+void print_arg(char* arg){
+  printf("Arg received: %s", arg);
+}
+\end{verbatim}
+
+  The main function
+
+\begin{verbatim}
+int main (int argc, char* argv){
+  print_arg("hello world");
+  return 0;
+}
+\end{verbatim}
+
+
+\begin{verbatim}
+gcc -c tangled-c.c
+gcc tangled-c.o -o tangled-c
+./tangled-c
+\end{verbatim}
+
+
+  
+
+\end{document}

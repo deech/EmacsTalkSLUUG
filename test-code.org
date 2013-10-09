@@ -1,0 +1,9 @@
+#+PROPERTY: padline no
+* Headline
+  #+BEGIN_SRC python :tangle ./test-bash.sh :comments yes
+  "hello"
+  #+END_SRC
+
+  #+RESULTS:
+  : None
+

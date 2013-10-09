@@ -1,0 +1,126 @@
+#+TITLE:     Emacsmorgasbord
+#+AUTHOR:    Aditya Siram
+#+EMAIL:     aditya.siram@gmail.com
+#+DESCRIPTION: A tour of Emacs
+#+KEYWORDS:  emacs
+#+LANGUAGE:  en
+#+STARTUP: beamer
+#+STARTUP: oddeven
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+BEAMER_THEME: Madrid
+#+OPTIONS:   H:2 toc:f
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+COLUMNS: %20ITEM %13BEAMER_env(Env) %6BEAMER_envargs(Args) %4BEAMER_col(Col) %7BEAMER_extra(Extra)
+
+* Overview
+** What is it?
+  - A text editor
+  - 40 years old (70's)
+    - In human terms ~3600 BC
+  - Steady growth
+  - New renaissance b/c scripting languages
+** Relevance
+  - Hundreds of add-ons
+  - Lots of batteries included
+  - Works everywhere
+  - Very well supported
+    - #emacs
+    - gnu.help.emacs
+* Talk Description
+** This talk ..
+  - Not flame-bait
+    + Also covers Emacs' faults
+  - No knowledge required
+  - Developer biased (because I am one)
+  - But also applicable to sysadmins
+  - Linux biased
+** This talk ...
+  - A whirlwind tour
+  - No explanations of every keyboard shortcut
+  - Yes, advanced material!
+  - Not going for complete understanding
+  - Defocus, magic-eye
+  - Please ask questions!
+* Basics
+** Terminology
+*** Emacs Window ...
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+    [[file:emacs-components.png]]
+   - `Window` == `buffer`
+   - The whole thing is a `frame`
+** Lifesavers
+   - `Control-g` or `Esc` - quit whatever I'm doing
+   - `C-/` - undo and _3_ other keybindings + 'Edit -> Undo'
+** Minibuffer
+   - Invoke with `M-x`
+   - `M` == "Meta" == `Alt`
+   - All your commands go here
+   - `M-x find-file` opens a (new) file
+** Self-help
+   - `M-x describe-function` - view docs and _keyboard shortcuts_
+   - `M-x describe-key` - what function does a shortcut invoke
+   - `M-x describe-variable` - view docs and _current value_
+   - `M-x info` - general Help facility
+** Revisit Find-File
+   - `M-x describe-function find-file`
+** Self-help using Menu Example
+   - View docs on `Insert File`
+   - `M-x describe-key C-x i`
+** Self-help with Toolbar
+   - Requires slightly more experience
+   - Know it's called a "toolbar"
+   - Probably a map somewhere
+   - Probably stored in a variable
+   - Try `M-x describe-variable`
+   - Also works with `minibuffer`
+** Structured self-help
+   - `M-x info`
+* Undoing Changes
+** Undo
+   - State is never lost
+   - `Redoing` is undoing an undo
+   - Yes, it's confusing
+** Undo-Tree
+   - Visualize changes in a tree
+   - Go back to any point
+   - Timestamp changes
+   - Diff mode
+* Cut/Copy/Paste
+** Cutting/Copying
+   - All cuts and copy's are saved to the `kill-ring`
+   - `C-y` pastes the most recent thing
+   - `M-y` goes back in history
+   - `M-x describe-variable kill-ring` - view the kill-ring
+** Rectangle Mode
+   - Select/delete/paste rectangular blobs of text
+   - Good for column based editing
+   - `ps -aux` example
+      - keep only root processes with pids
+   - Can't go past EOL
+     - Vim's Visual block is much better
+   - `df -h` example
+     - Move mount points before the usage
+** Picture mode
+   - Drawing ASCII diagrams
+   - Fixes all the issues with rectangle-mode
+   - Can select arbitrary regions
+* Working with code
+** Occur-mode
+   - Match and _edit_ lines that match regex
+** Imenu
+   - python example
+* Org Mode
+** Org-beamer
+   - this talk
+** Org-babel
+   - Show code file
+** Org-table
+   - Simple Table
+   - Df revisited
+* References
+** References
+  - http://learn-elisp-for-emacs.org
